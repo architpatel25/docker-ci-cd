@@ -1,2 +1,2 @@
-# ci-cd
-using GitLab CI-CD pipeline
+# Docker with ci-cd
+using Docker with GitHub CI-CD pipeline
