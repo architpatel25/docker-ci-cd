@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ greeting }} {{ name }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background: #081b2f;
+			color: #fff;
+			font-family: "Quicksand", Helvetica, sans-serif;
+			font-size: 18px;
+		}
+		main {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 100vh;
+			align-items: center;
+			justify-items: center; /* adjusted */
+		}
+		section {
+			width: 95%;
+			max-width: 600px;
+  		justify-self: center;
+  		align-self: center;
+			text-align: center;
+		}
+		h1 {
+			font-size: 4rem;
+			font-weight: 700;
+			margin-bottom: 0.25em;
+		}
+		h1 span {
+			color: {{ color }};
+		}
+		footer {
+			margin-top: 1em;
+		}
+		footer p {
+			margin: 0.5em 0;
+			font-size: 0.8rem;
+			color: #5c7b88;
+		}
+		footer a {
+			color: #5c7b88;
+		}
+	</style>
+</head>
+<body>
+	<main>
+	<section>
+		<h1>{{ greeting }} <span>{{ name }}</span></h1>
+			<p>Version {{ version }}</p>
+		<footer>
+			<p>Testig With Docker Image/Container</p>
+		</footer>
+	</section>
+	</main>
+</body>
+</html>

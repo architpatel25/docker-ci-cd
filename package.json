@@ -1,0 +1,30 @@
+{
+  "name": "Docker-demo",
+  "version": "0.0.1",
+  "author": "Archit",
+  "license": "MIT",
+  "private": true,
+  "description": "Docker Demo with wtih Node.js app",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js",
+    "dev": " node app/server.js",
+    "app-version": "node -e \"console.log(require('./package.json').version)\"",
+    "lint": "eslint .",
+    "test": "tap test",
+    "test:watch": "tap test --watch",
+    "preflight": "npm audit --production && npm run lint && npm run test"
+  },
+  "dependencies": {
+    "fastify": "^4.15.0",
+    "@fastify/helmet": "^10.1.0",
+    "handlebars": "^4.7.7",
+    "pino": "^8.11.0",
+    "@fastify/view": "^7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "nodemon": "^3.0.3",
+    "tap": "^18.7.0"
+  }
+}
