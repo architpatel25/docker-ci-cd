@@ -39,6 +39,4 @@ docker run -p 3000:3000 docker-demo
 ``` https://docs.docker.com/get-started/04_sharing_app/ ```
 
 ### Finally, Run your application in your local system with port(3000)
-
-![Hey-Archit](https://github.com/architpatel25/docker-ci-cd/assets/25317936/4065f3b7-273b-40d5-85ca-c0cee1e0e123)
-
+![Hey-Archit (1)](https://github.com/architpatel25/docker-ci-cd/assets/25317936/16702161-4566-47ca-871c-39c04aded997)
