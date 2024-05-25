@@ -1,13 +1,19 @@
 FROM node:lts-alpine
-RUN apk add dumb-init
 
-ENV NODE_ENV production
-ENV HOST '0.0.0.0'
-
+# Set the working directory inside the container
 WORKDIR /usr/src/app
-COPY . /usr/src/app
 
-RUN npm ci --only=production
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
 
-USER node
-CMD ["dumb-init", "node", "app/server.js"]
+# Install dependencies using npm ci
+RUN npm ci
+
+# Copy the rest of the application code to the working directory
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Define the command to run the application
+CMD ["npm", "start"]
